@@ -24,4 +24,5 @@ def articla_flag(request, year, month, flag):
 def get_current_datetime(request):
     today = datetime.today()
     formattoday = today.strftime("%Y-%m-%d %H:%M:%S")
-    return HttpResponse(f"当前时间为：{formattoday}")
+    html = f"<h1>当前时间为：{formattoday}</h1>"
+    return HttpResponse(html)
